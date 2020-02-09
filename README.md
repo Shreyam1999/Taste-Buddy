@@ -50,6 +50,8 @@ git clone https://github.com/Shreyam1999/Taste-Buddy.git
 ```sh
 npm install
 ```
+*All dependencies can be found from package.json file
+*Dependencies include(
 
 or
 
