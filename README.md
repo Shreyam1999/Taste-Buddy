@@ -35,14 +35,14 @@ To see the app in action, go to [https://taste-buddy.herokuapp.com/](https://tas
 
 ### Custom Enhancements
 
-* Update campground photos when editing campgrounds
+* Update food recipe photos when editing campgrounds
  
 ## Getting Started
 
 ### Clone or download this repository
 
 ```sh
-git clone https://github.com/Shreyam1999/.git
+git clone https://github.com/Shreyam1999/Taste-Buddy.git
 ```
 
 ### Install dependencies
@@ -57,10 +57,6 @@ or
 yarn install
 ```
 
-### Comments in code
-
-Some comments in the source code are course notes and therefore might not seem necessary from a developer's point of view.
-
 ## Built with
 
 ### Front-end
@@ -73,22 +69,17 @@ Some comments in the source code are course notes and therefore might not seem n
 * [express](https://expressjs.com/)
 * [mongoDB](https://www.mongodb.com/)
 * [mongoose](http://mongoosejs.com/)
-* [async](http://caolan.github.io/async/)
-* [crypto](https://nodejs.org/api/crypto.html#crypto_crypto)
-* [helmet](https://helmetjs.github.io/)
 * [passport](http://www.passportjs.org/)
 * [passport-local](https://github.com/jaredhanson/passport-local#passport-local)
 * [express-session](https://github.com/expressjs/session#express-session)
 * [method-override](https://github.com/expressjs/method-override#method-override)
-* [nodemailer](https://nodemailer.com/about/)
 * [moment](https://momentjs.com/)
-* [cloudinary](https://cloudinary.com/)
+* [mongolab atlas](https://mongolabatlas.com/)
 * [geocoder](https://github.com/wyattdanger/geocoder#geocoder)
 * [connect-flash](https://github.com/jaredhanson/connect-flash#connect-flash)
 
 ### Platforms
 
-* [Cloudinary](https://cloudinary.com/)
 * [Heroku](https://www.heroku.com/)
 
 
