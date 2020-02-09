@@ -61,6 +61,12 @@ npm install
   passport,
   passport-local,
   passport-local-mongoose
+  
+  ### To start the server at CLI
+
+```sh
+node app.js
+```
 
 ## Built with
 
