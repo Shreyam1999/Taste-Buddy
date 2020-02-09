@@ -51,22 +51,16 @@ git clone https://github.com/Shreyam1999/Taste-Buddy.git
 npm install
 ```
 * All dependencies can be found from package.json file:
-  body-parser
-  connect-flash
-  ejs
-  express
-  express-session
-  method-override
-  mongoose
-  passport
-  passport-local
+  body-parser,
+  connect-flash,
+  ejs,
+  express,
+  express-session,
+  method-override,
+  mongoose,
+  passport,
+  passport-local,
   passport-local-mongoose
-
-or
-
-```sh
-yarn install
-```
 
 ## Built with
 
