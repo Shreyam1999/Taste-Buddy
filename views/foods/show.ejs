@@ -1,0 +1,57 @@
+ <%- include ("../partials/header") %>
+
+<div class="container">
+<div class="row">
+	<div class="col-md-3" style="width=10%;height:auto; background-color:grey; ">
+		<h2 style="color:white;">Ingredients</h2>
+		<hr>
+			<span style="width:10%;color:white;"><h3><%=food.ingredients%></h3></span>
+	</div>
+    <div class="col-md-9" >
+        <div class="thumbnail" >
+	       <img class="img-responsive" src="<%=food.image%>">
+	       <div style="background-color:grey; border:2px solid white;">
+	       <h1 style="text-align:center; color:white; margin:0 0 0;"><%=food.name%></h1>
+	       </div>
+				<div class="caption-full" style="background-color:grey;  border:2px solid white;">
+				    <h2 style="color:white;">Preparation:</h2>
+					<h3 style="color:white;"><%=food.description%></h3>
+					<p>
+					<h3 style="color:orange;"><em>Submitted by:<%=food.author.username%></em></h3>
+					</p>
+					<% if(currentUser && food.author.id.equals(currentUser._id)){%>
+					<a class="btn btn-xs btn-warning" href="/foods/<%=food._id%>/edit">Edit</a>
+					<form id="delete" action="/foods/<%=food._id%>?_method=DELETE" method="POST">
+					<button class="btn btn-xs btn-danger">Delete</button>
+					</form>
+					<%}%>
+				</div>
+	    </div>
+    <div class="well">
+		<div class="text-right">
+			<a class="btn btn-success" href="/foods/<%=food._id%>/comments/new">Leave a Review</a>
+		</div>
+	    <hr>
+		<% food.comments.forEach(function(comment){%>
+			<div class="row">
+				<div class="col-md-12">
+					<strong><%=comment.author.username%></strong>
+					<span class="pull-right">10 days ago</span>
+					<p>
+					<%=comment.text%>
+					</p>
+					<% if(currentUser && comment.author.id.equals(currentUser._id)){%>
+					<a class="btn btn-xs btn-warning" href="/foods/<%=food._id%>/comments/<%=comment._id%>/edit">Edit</a>
+					<form id="delete" action="/foods/<%=food._id%>/comments/<%=comment._id%>?_method=DELETE" method="POST">
+					<input type="submit" class="btn btn-xs btn-danger" value="Delete"> 
+					</form>
+					<%}%>
+				</div>
+			</div>
+		<%})%>
+	</div>
+</div>
+</div>
+</div>
+
+<%- include ("../partials/footer") %>

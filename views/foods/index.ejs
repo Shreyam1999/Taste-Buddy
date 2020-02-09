@@ -1,0 +1,55 @@
+	<%- include ("../partials/header") %>
+	<div class="container">
+	<header class="jumbotron" id="color">
+	  <div class="container">
+	       <h1>TASTE-BUDDY!</h1>
+
+	       <div id="myOverlay" class="overlay">
+          <span class="closebtn" onclick="closeSearch()" title="Close Overlay">x</span>
+           <div class="overlay-content">
+            <form action="/foods" method="GET" class="form-inline">
+                <input type="text" name="search" placeholder="Search Food Recipe........." class="form-control">
+                <button type="submit" value="Search"><i class="fa fa-search"></i></button>
+           </form>
+           </div>
+          </div>
+          <button class="btn btn-danger btn-lg btn-block" class="openBtn" onclick="openSearch()">SEARCH FOOD RECIPE</button>
+
+          <script>
+			function openSearch() {
+			  document.getElementById("myOverlay").style.display = "block";
+			}
+
+			function closeSearch() {
+			  document.getElementById("myOverlay").style.display = "none";
+			}
+			</script>
+            <div style="margin-top:20px;">
+	        <a class="btn btn-primary btn-lg btn-block" href="/foods/new">ADD NEW RECIPES TO OUR MENU</a>
+	        </div>
+	    </p>
+	    <div>
+	</header>
+
+	<div class="row text-center" style="display:flex; flex-wrap:wrap;">
+	<% foods.forEach(function(food){ %>
+
+		<div class= col-md-3 col-sm-6" >
+		 <div class="thumbnail">
+		  <img src="<%=food.image %>">
+
+		<div class="caption">
+		<h4><%=food.name %></h4>
+		</div>
+			<p>
+			   <a href="/foods/<%=food._id%>" class="btn btn-primary">More Info</a>
+			</p>
+	   </div>
+	 </div>  	
+
+	<% }); %>
+
+	  </div>
+	</div>
+
+	<%- include ("../partials/footer") %>
