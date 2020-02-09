@@ -62,6 +62,12 @@ npm install body-parser connect-flash ejs express express-session method-overrid
 node app.js
 ```
 
+### For running in the browser from localhost
+
+```sh
+[localhost:2300](https://localhost:2300.com/)
+```
+
 ## Built with
 
 ### Front-end
